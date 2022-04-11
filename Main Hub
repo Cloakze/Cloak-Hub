@@ -68,3 +68,7 @@ game:GetService("ReplicatedStorage").Game.Events.BuyEgg:InvokeServer(unpack(args
             game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = v
         end)
     end
+
+            -- Keybind
+            local Keys = Window:NewTab("Keys")
+            local KeysSection = Keys:NewSection("Keys")
