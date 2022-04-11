@@ -5,6 +5,11 @@
         local Main = Window:NewTab("Main")
         local MainSection = Main:NewSection("Main")
 
+
+        -- Teleports
+        MainSection:NewButton("Desert Teleport (Third World)", "Teleport to the Desert Area", function()
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1047.29236, 10.1139364, -59.6322594, -0.995642066, -1.50975339e-08, -0.0932569355, -2.54042387e-08, 1, 1.09332284e-07, 0.0932569355, 1.11224942e-07, -0.995642066)
+        end)
         MainSection:NewButton("Toxic City Teleport (Second World)", "Teleport to Toxic City", function()
             game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1562.33813, 12.0872688, -74.4179459, -0.704032779, 8.30334201e-08, 0.710167468, 1.54769122e-08, 1, -1.01577683e-07, -0.710167468, -6.05228152e-08, -0.704032779)
         end)
