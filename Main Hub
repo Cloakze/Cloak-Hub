@@ -5,6 +5,13 @@
         local Main = Window:NewTab("Main")
         local MainSection = Main:NewSection("Main")
 
+        MainSection:NewButton("Toxic City Teleport (Second World)", "Teleport to Toxic City", function()
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1562.33813, 12.0872688, -74.4179459, -0.704032779, 8.30334201e-08, 0.710167468, 1.54769122e-08, 1, -1.01577683e-07, -0.710167468, -6.05228152e-08, -0.704032779)
+        end)
+        MainSection:NewButton("Main Area Teleport", "Teleport to the Main Area", function()
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2047.81641, 13.4609442, -87.95121, -0.73829937, 0, 0.674473166, 0, 1, 0, -0.674473166, 0, -0.73829937)
+        end)
+
         -- Auto Rebirth
         MainSection:NewToggle("Auto Rebirth (10)", "Makes your player auto-rebirth.", function(v)
             getgenv().Rebirth = v
