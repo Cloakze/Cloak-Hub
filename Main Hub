@@ -1,23 +1,30 @@
-    if game.PlaceId == 8044403176 then
+    
+    
+    
+    -- Vehicle Simulator
+        if game.PlaceId == 8044403176 then
         local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
         local Window = Library.CreateLib("Vehicle Simulator", "Sentinel")
-        -- Main
+    -- Main
         local Main = Window:NewTab("Main")
         local MainSection = Main:NewSection("Main")
 
 
-        -- Teleports
+    -- Teleports
         MainSection:NewButton("Desert Teleport (Third World)", "Teleport to the Desert Area", function()
             game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1047.29236, 10.1139364, -59.6322594, -0.995642066, -1.50975339e-08, -0.0932569355, -2.54042387e-08, 1, 1.09332284e-07, 0.0932569355, 1.11224942e-07, -0.995642066)
         end)
         MainSection:NewButton("Toxic City Teleport (Second World)", "Teleport to Toxic City", function()
             game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1562.33813, 12.0872688, -74.4179459, -0.704032779, 8.30334201e-08, 0.710167468, 1.54769122e-08, 1, -1.01577683e-07, -0.710167468, -6.05228152e-08, -0.704032779)
         end)
+        MainSection:NewButton("Secret Egg Teleport (Toxic City)", "Teleport to the secret egg in Toxic City", function()
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1604.19299, 3.67349625, 74.2359009, 0.0298649073, 2.26713794e-08, 0.999553919, 1.1622594e-09, 1, -2.27162218e-08, -0.999553919, 1.8401588e-09, 0.0298649073)
+        end)
         MainSection:NewButton("Main Area Teleport", "Teleport to the Main Area", function()
             game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2047.81641, 13.4609442, -87.95121, -0.73829937, 0, 0.674473166, 0, 1, 0, -0.674473166, 0, -0.73829937)
         end)
 
-        -- Auto Rebirth
+    -- Auto Rebirth
         MainSection:NewToggle("Auto Rebirth (10)", "Makes your player auto-rebirth.", function(v)
             getgenv().Rebirth = v
             while true do
@@ -32,7 +39,7 @@
 
 
 
-        -- Auto Egg (Basic/Starter)
+    -- Auto Egg (Basic/Starter)
         MainSection:NewToggle("Auto Egg (Basic/Starter)", "Makes your player Buy eggs.", function(v)
             getgenv().Egg = v
             while true do
@@ -61,7 +68,7 @@ game:GetService("ReplicatedStorage").Game.Events.BuyEgg:InvokeServer(unpack(args
 
 
 
-        -- Player
+    -- Player
         local Player = Window:NewTab("Player")
         local PlayerSection = Player:NewSection("Player")
         PlayerSection:NewSlider("Walkspeed", "Changes your Walkspeed.", 250, 16, function(v)
@@ -69,6 +76,40 @@ game:GetService("ReplicatedStorage").Game.Events.BuyEgg:InvokeServer(unpack(args
         end)
     end
 
-            -- Keybind
-            local Keys = Window:NewTab("Keys")
-            local KeysSection = Keys:NewSection("Keys")
+
+
+
+    -- Mad City
+    if game.PlaceId == 1224212277 then
+        local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+        local Window = Library.CreateLib("Mad City", "BloodTheme")
+    -- Main
+        local Main = Window:NewTab("Main")
+        local MainSection = Main:NewSection("Main")
+
+
+
+
+    -- Teleports
+        MainSection:NewButton("Teleport Outside Prison", "Teleport to outside the Prison", function()
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-892.43927, 58.5890274, -2561.43457, 0.990733266, 2.70021285e-08, -0.13582179, -1.22689503e-08, 1, 1.09311408e-07, 0.13582179, -1.06632065e-07, 0.990733266)
+        end)
+        MainSection:NewButton("Teleport Inside Prison (Cafeteria)", "Teleport to the Prisons Cafeteria", function()
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-960.763, 80.9379883, -3286.14819, -0.999007702, -9.89933691e-10, -0.044537764, -1.22397692e-09, 1, 5.22766763e-09, 0.044537764, 5.27699351e-09, -0.999007702)
+        end)
+        MainSection:NewButton("Teleport Hero Base/Spawn", "Teleport to the Hero Base/Spawn", function()
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-864.737305, 348.307831, 863.394165, 0.803073049, 5.27875628e-08, -0.595880568, -3.34393349e-08, 1, 4.35210268e-08, 0.595880568, -1.50247139e-08, 0.803073049)
+        end)
+
+
+
+
+    -- Player
+        local Player = Window:NewTab("Player")
+        local PlayerSection = Player:NewSection("Player")
+
+    -- Inf Jump
+PlayerSection:NewButton("Infinite Jump Press (R) To Enable/Disable", "Make your Player Have Infinite Jump", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/HQsQysa8", true))()
+end)
+end
