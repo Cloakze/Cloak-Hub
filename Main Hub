@@ -1,7 +1,7 @@
     
     
     
-    -- Vehicle Simulator
+-- Vehicle Simulator
         if game.PlaceId == 8044403176 then
         local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
         local Window = Library.CreateLib("Vehicle Simulator", "Sentinel")
@@ -79,7 +79,7 @@ game:GetService("ReplicatedStorage").Game.Events.BuyEgg:InvokeServer(unpack(args
 
 
 
-    -- Mad City
+-- Mad City
     if game.PlaceId == 1224212277 then
         local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
         local Window = Library.CreateLib("Mad City", "BloodTheme")
@@ -112,4 +112,128 @@ game:GetService("ReplicatedStorage").Game.Events.BuyEgg:InvokeServer(unpack(args
 PlayerSection:NewButton("Infinite Jump Press (R) To Enable/Disable", "Make your Player Have Infinite Jump", function()
     loadstring(game:HttpGet("https://pastebin.com/raw/HQsQysa8", true))()
 end)
+end
+
+
+
+
+
+-- Rocitizens
+if game.PlaceId == 137877687 then
+    local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+    local Window = Library.CreateLib("Rocitizens GUI", "Midnight")
+    -- Main
+    local Main = Window:NewTab("Main")
+    local MainSection = Main:NewSection("Main")
+
+    -- Spawns Chippys
+    MainSection:NewButton("WIP (Chip Spawning)", "Spawns Very Nice Chipps For The Clan", function()
+        game:GetService("ReplicatedStorage").Modules.Work.ClickDrag.Relays.CreateObject:InvokeServer(unpack(args))
+        local args = {
+            [1] = "RawFries",
+            [2] = workspace.WorkEnvironments:FindFirstChild("Nomburger_Line Cook").Machines.DeepFryer
+        }
+        local args = {
+            [1] = "FryBox",
+            [2] = CFrame.new(-5177.60595703125, 6.306200981140137, 4660.84619140625) * CFrame.Angles(-2.60093092918396, -0.17915743589401245, -3.0350189208984375)
+        }
+        game:GetService("ReplicatedStorage").Modules.Work.ClickDrag.Relays.CreateObject:InvokeServer(unpack(args))
+        local args = {
+            [1] = "FryBox",
+            [2] = CFrame.new(-5177.9228515625, 6.306200981140137, 4660.6083984375) * CFrame.Angles(-2.534176826477051, 0.2602575719356537, 2.964599847793579)
+        }
+        
+        game:GetService("ReplicatedStorage").Modules.Work.ClickDrag.Relays.CreateObject:InvokeServer(unpack(args))
+        local args = {
+            [1] = workspace.WorkEnvironments:FindFirstChild("Nomburger_Line Cook").Assets.CookedFries,
+            [2] = workspace.WorkEnvironments:FindFirstChild("Nomburger_Line Cook").Assets.FryBox
+        }
+        
+        game:GetService("ReplicatedStorage").Modules.Work.ClickDrag.Relays.PlaceObject:InvokeServer(unpack(args))
+        local args = {
+            [1] = workspace.WorkEnvironments:FindFirstChild("Nomburger_Line Cook").Assets.CompletedFrenchFries,
+            [2] = workspace.WorkEnvironments:FindFirstChild("Nomburger_Line Cook").Machines.FulfillmentPad
+        }
+        
+        game:GetService("ReplicatedStorage").Modules.Work.ClickDrag.Relays.PlaceObject:InvokeServer(unpack(args))
+    end)
+
+
+    -- Spawns NomBurgers
+    MainSection:NewButton("Spawn Made Burgers ( Requires Cooked Patty(s) )", "Spawns NomBurgers", function()
+        local args = {
+            [1] = "Bun",
+            [2] = CFrame.new(-5178.865234375, 6.306200981140137, 4660.72802734375) * CFrame.Angles(-2.5730769634246826, 0.7360943555831909, 2.736388921737671)
+        }
+        
+        game:GetService("ReplicatedStorage").Modules.Work.ClickDrag.Relays.CreateObject:InvokeServer(unpack(args))
+        local args = {
+            [1] = "RawPatty",
+            [2] = workspace.WorkEnvironments:FindFirstChild("Nomburger_Line Cook").Machines.Grill.PattyNodes.Grill
+        }
+        
+        game:GetService("ReplicatedStorage").Modules.Work.ClickDrag.Relays.CreateObject:InvokeServer(unpack(args))
+        local args = {
+            [1] = workspace.WorkEnvironments:FindFirstChild("Nomburger_Line Cook").Assets.CookedPatty,
+            [2] = workspace.WorkEnvironments:FindFirstChild("Nomburger_Line Cook").Assets.Bun
+        }
+        
+        game:GetService("ReplicatedStorage").Modules.Work.ClickDrag.Relays.PlaceObject:InvokeServer(unpack(args))
+        local args = {
+            [1] = "Cheese",
+            [2] = workspace.WorkEnvironments:FindFirstChild("Nomburger_Line Cook").Assets.Bun
+        }
+        
+        game:GetService("ReplicatedStorage").Modules.Work.ClickDrag.Relays.CreateObject:InvokeServer(unpack(args))
+        local args = {
+            [1] = "Bun",
+            [2] = workspace.WorkEnvironments:FindFirstChild("Nomburger_Line Cook").Assets.Bun
+        }
+        
+        game:GetService("ReplicatedStorage").Modules.Work.ClickDrag.Relays.CreateObject:InvokeServer(unpack(args))
+        local args = {
+            [1] = workspace.WorkEnvironments:FindFirstChild("Nomburger_Line Cook").Assets.CompletedBurger,
+            [2] = workspace.WorkEnvironments:FindFirstChild("Nomburger_Line Cook").Machines.FulfillmentPad
+        }
+
+        game:GetService("ReplicatedStorage").Modules.Work.ClickDrag.Relays.PlaceObject:InvokeServer(unpack(args))
+
+    
+    end)
+
+    -- Spawns Pattys To Cook
+    MainSection:NewButton("Spawns Cooking Patty(s) ", "Spawns +1 Cooking Patty", function()
+        local args = {
+            [1] = "RawPatty",
+            [2] = workspace.WorkEnvironments:FindFirstChild("Nomburger_Line Cook").Machines.Grill.PattyNodes.Grill
+}
+
+        game:GetService("ReplicatedStorage").Modules.Work.ClickDrag.Relays.CreateObject:InvokeServer(unpack(args))
+
+    end)
+
+
+
+
+
+    -- Opens Nomburger Doors
+    MainSection:NewButton("Open Doors", "Opens Nomburger Door", function()
+        local args = {
+            [1] = "{42b160a3-397b-45ef-94ea-0d76a36729c3}"
+        }
+        
+        game:GetService("ReplicatedStorage").Relays.Interaction.DoorInteract:FireServer(unpack(args))
+        local args = {
+            [1] = "{2dada243-780d-4ae7-9763-ae8a1e6d183b}"
+        }
+
+        game:GetService("ReplicatedStorage").Relays.Interaction.DoorInteract:FireServer(unpack(args))
+    end)
+
+    -- Player
+    local Player = Window:NewTab("Player")
+    local PlayerSection = Player:NewSection("Player")
+    PlayerSection:NewSlider("Walkspeed", "Changes your Walkspeed.", 250, 16, function(v)
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = v
+    end)
 end
